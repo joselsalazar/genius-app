@@ -1,0 +1,25 @@
+{
+  "name": "genius-app",
+  "version": "1.0.0",
+  "description": "Genius app connecting geniuses with developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joselsalazar/genius-app.git"
+  },
+  "author": "Salazar Bros.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joselsalazar/genius-app/issues"
+  },
+  "homepage": "https://github.com/joselsalazar/genius-app#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
