@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FriendFinder</title>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<h2>Genius Questionnaire</h2>
+		<hr>
+
+		<p>
+			Your business is important: that is why this questionnaire is designed to give basic information to get you the help you need without giving away any secrets. The questionnaire is written in the most concise way, so don’t skip any questions.
+		</p>
+		
+		<div class="form-group">
+		    <label for="business-impact">Give a short description of the business industry that you want to impact.</label>
+		    <textarea class="form-control" id="business-impact" rows="3" placeholder="The online flower ordering industry is pretty small, as there aren't many good systems to automate all of the custom insitructions that people usually want for a flower arangement."></textarea>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-description">Give a quick description of your business.</label>
+		    <br>
+		    <label for="business-description"><small>This doesn’t need to be overly detailed, and it shouldn’t give away your business secrets. This is just an overview to get you connected with developers and investors.</small></label>
+		    <textarea class="form-control" id="business-description" rows="3" placeholder="I want to create a flower arangement ordering app  that will reach people around the US. The app should be easy to use, and it should be able to handle several special instructions with ease."></textarea>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-audience">Who is your target audience for this business?</label>
+		    <textarea class="form-control" id="business-audience" rows="3" placeholder="Anyone who wants to surprise another with a bouquet of flowers. This could be anniversary, special day, or it can simply be a friendly bouquet of flowers. I can get messages printed cheaply, so I would like to upsell them to include long messages."></textarea>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-impact">What's the status of your current business?</label>
+   		    <label for="business-description"><small>This doesn’t need to be overly detailed, and it shouldn’t give away your business secrets. This is just an overview to get you connected with developers and investors.</small></label>
+		    <textarea class="form-control" id="business-impact" rows="3" placeholder="The online flower ordering industry is pretty small, as there aren't many good systems to automate all of the custom insitructions that people usually want for a flower arangement."></textarea>
+		</div>
+
+		<br>
+		<br>
+
+		<!-- Submit Button -->
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ Submit</button>
+
+		<hr>
+	    <footer class="footer">
+	      <div class="container">
+		        <p><a href="/api/friendsList">API Friends List</a> | <a href="https://github.com/joselsalazar/friendfinder">GitHub Repo</a></p>
+	      </div>
+	    </footer>
+
+	</div>
+
+	<!-- Modal -->
+	<div id="resultsModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h2 id="matchName"></h2>
+	        <img id="matchImg" src="https://pbs.twimg.com/profile_images/460709099382910976/7E1QZrkT.jpeg" alt="">
+	      </div>
+	      <div class="modal-footer">
+	        <a href="/" class="btn btn-success">
+		        Home
+		    </a>
+	        <a href="/survey" class="btn btn-primary">
+		        Try Again!
+	        </a>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+  <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
