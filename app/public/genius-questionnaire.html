@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>FriendFinder</title>
+	<title>Genius Questionnaire</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -47,9 +47,56 @@
 		</div>
 
 		<div class="form-group">
-		    <label for="business-impact">What's the status of your current business?</label>
-   		    <label for="business-description"><small>This doesn’t need to be overly detailed, and it shouldn’t give away your business secrets. This is just an overview to get you connected with developers and investors.</small></label>
-		    <textarea class="form-control" id="business-impact" rows="3" placeholder="The online flower ordering industry is pretty small, as there aren't many good systems to automate all of the custom insitructions that people usually want for a flower arangement."></textarea>
+		    <label for="business-impact">Current Business State</label>
+		    <br>
+   		    <label for="business-description"><small>Is the business just an idea, or is it a running business with room to grow? If it’s running, state the ways you want it to grow.</small></label>
+		    <textarea class="form-control" id="business-impact" rows="3" placeholder="Right now, the flower ordering app is just an idea. I have a business that will outline exactly what needs to be done with the app, as well as projected costs and sales. The business plan will be available once I agree to work with a developer."></textarea>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-finance-source">Can you finance the business?</label>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="business-finance-source" id="business-finance-source" value="yes" checked>
+			    Yes: Great! That simplifies things.
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="business-finance-source" id="business-finance-source" value="no" checked>
+			    No: No worries, we’ll get you in touch with an investor.
+			  </label>
+			</div>
+			<div class="form-group">
+				<label for="business-finance-requirement">If not self-funding, approxiametly how much money do you need to get started?</label>
+				<input type="text" class="form-control" id="business-finance-requirement" placeholder="The business will need about $10,000 to get started. Documentation regarding marketing can be provided upon request.">
+			</div>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-developer-compensation">Will the developer be paid for her time?</label>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="business-developer-compensation" id="business-developer-compensation" value="yes" checked>
+			    Yes
+			  </label>
+			</div>
+			<div class="form-check">
+			  <label class="form-check-label">
+			    <input class="form-check-input" type="radio" name="business-developer-compensation" id="business-developer-compensation" value="no" checked>
+			    No
+			  </label>
+			</div>
+			<div class="form-group">
+				<label for="business-finance-requirement">If no, describe developer compensation:?</label>
+				<input type="text" class="form-control" id="business-finance-requirement" placeholder="The developer will get 40 percent of all flower arrangements ordered. The site will start taking orders roughly two months after dev work starts.">
+			</div>
+		</div>
+
+		<div class="form-group">
+		    <label for="business-investor-compensation">If an investor is required, approximately when does she start to receive returns?</label>
+			<input type="text" class="form-control" id="business-investor-compensation" placeholder="Within two months after launching the site, online orders will be placed and the business will receive a revenue stream.">
+
 		</div>
 
 		<br>
