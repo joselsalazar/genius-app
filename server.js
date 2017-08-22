@@ -46,3 +46,33 @@ require("./app/routing/htmlRoutes")(app);
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
+
+// ==============================================================================
+// DATABASE
+// Setup required for MongoDB
+// ==============================================================================
+var mongoose = require('mongoose');
+var MongoStore = require('connect-mongo')(session);
+mongoose.connect("mongodb://ec2-34-224-61-254.compute-1.amazonaws.com:27017");
+var db = mongoose.connection;
+
+// Session config for Passport
+var sessionOptions = {
+	secret: "this is a super secret dadada",
+	resave: true,
+	saveUninitialized: true,
+  	store: new MongoStore({
+  	  mongooseConnection: db
+ 	})
+};
+
+app.use(session(sessionOptions));
+
+// Initialize Passport
+app.use(passport.initialize());
+
+// Restore Session, this restores the user's previous session
+app.use(passport.session());
+
+// mongo error
+db.on('error', console.error.bind(console, 'connection error:'));
